@@ -86,7 +86,7 @@
                     table.querySelectorAll('tr')[i+1].append(create);
                     table.querySelectorAll('tr')[i+1].querySelectorAll('td')[x].innerHTML = temp;
             }
-            fetch("/DataBase/DB.xml").then(response => response.text()).then(str => new window.DOMParser().parseFromString(str, "text/xml")).then(data => {
+            fetch("/DB.xml").then(response => response.text()).then(str => new window.DOMParser().parseFromString(str, "text/xml")).then(data => {
                 trains = data.querySelectorAll('train');
                 for (let i = 0; i < trains.length; i++) {
                     let x = 0;
