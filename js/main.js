@@ -1,3 +1,9 @@
+window.onload = function() {
+    for (let i = 0; i < document.getElementsByClassName("adv").length; i++) {
+        document.getElementsByClassName("adv")[1].style.display = "flex";
+    }
+}
+
 function animation1() {
     let button1 = document.getElementById ('button1'),
     ad1 = document.getElementById ('ad1'),
