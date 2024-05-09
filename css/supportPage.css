@@ -28,4 +28,10 @@ section section:nth-child(3) p {
   font-weight: 600;
   font-style: italic;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+  section section {
+    height: auto;
+  }
 }/*# sourceMappingURL=supportPage.css.map */

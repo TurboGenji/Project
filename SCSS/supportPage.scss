@@ -7,7 +7,7 @@ article {
 }
 
 section {
-    padding: 0 20px 0 20px;
+    padding: 0 20px 0 20px;;
     section {
         width: 50%;
         height: 15vh; 
@@ -26,6 +26,13 @@ section {
             font-weight: 600;
             font-style: italic;
             text-decoration: underline;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    section {
+        section {
+            height: auto;
         }
     }
 }
