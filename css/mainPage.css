@@ -316,6 +316,9 @@ h3 {
     .img {
         width: 40%
     }
+    .adv1 {
+        width: 100%;
+    }
 .adv2 {
     display: inline-flex;
     flex-direction: column;
