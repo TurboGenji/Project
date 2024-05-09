@@ -1,6 +1,6 @@
 window.onload = function() {
-    for (let i = 0; i < document.getElementsByClassName("adv").length; i++) {
-        document.getElementsByClassName("adv")[1].style.display = "flex";
+    for (let i = 0; i < document.getElementsByClassName("adv1").length; i++) {
+        document.getElementsByClassName("adv1")[i].style.display = "flex";
     }
 }
 
