@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trains>
+<train>
+    <place>Орша</place>
+    <when>10.10</when>
+    <time>12:30</time>
+    <timeCome>13:40</timeCome>
+</train>
+<train>
+    <place>Москва</place>
+    <when>10.10</when>
+    <time>12:00</time>
+    <timeCome>24:00</timeCome>
+</train>
+<train>
+    <place>Москва</place>
+    <when>11.10</when>
+    <time>12:00</time>
+    <timeCome>24:00</timeCome>
+</train>
+<train>
+    <place>Гомель</place>
+    <when>10.10</when>
+    <time>8:00</time>
+    <timeCome>12:00</timeCome>
+</train>
+<train>
+    <place>Гомель</place>
+    <when>10.10</when>
+    <time>9:00</time>
+    <timeCome>13:00</timeCome>
+</train>
+<train>
+    <place>Минск</place>
+    <when>10.10</when>
+    <time>8:00</time>
+    <timeCome>9:00</timeCome>
+</train>
+<train>
+    <place>Минск</place>
+    <when>10.10</when>
+    <time>9:00</time>
+    <timeCome>10:00</timeCome>
+</train>
+</trains>

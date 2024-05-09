@@ -1,0 +1,31 @@
+article {
+  display: flex;
+  justify-content: center;
+}
+article h1 {
+  font-size: 40px;
+}
+
+section {
+  padding: 0 20px 0 20px;
+}
+section section {
+  width: 50%;
+  height: 15vh;
+}
+section section p {
+  font-size: 20px;
+}
+section section:nth-child(2) {
+  margin-left: 50%;
+}
+section section:nth-child(3) {
+  margin-left: 25%;
+}
+section section:nth-child(3) p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+}/*# sourceMappingURL=supportPage.css.map */

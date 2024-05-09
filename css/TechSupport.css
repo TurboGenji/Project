@@ -1,0 +1,18 @@
+.techSupport {
+    position: fixed;
+    bottom: 35px;
+    width: 7%;
+    left: 35px;
+    z-index: 2;
+}
+.techSupport img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:672px) {
+    .techSupport {
+        width: 20vw;
+        left: 70vw;
+    }
+}

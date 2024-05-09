@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Footer.css">
+    <link rel="stylesheet" href="css/Header.css">
+    <link rel="stylesheet" href="css/TechSupport.css">
+    <link rel="stylesheet" href="css/waysPage.css">
+</head>
+<body>
+    <header>
+        <div class="pic">
+            <a style="display: inline-flex;" href="index.html" name="top">
+                <img src="svg/logo.svg">
+                <div style="display: inline-flex; align-items: center; align-self: center; font-size: 20px; color: #00116C; font-weight: bold; font-size: 28px"><i>Солигорский ЖД вокзал</i></div>
+            </a>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box">
+              <li><a class="menu__item" href="history.html">История</a></li>
+              <li><a class="menu__item" href="ways.html">Рейсы</a></li>
+              <li><a class="menu__item" href="services.html">Услуги</a></li>
+            </ul>
+          </div>
+        <div class="top-info">
+            <a class="more" href="history.html">
+                История
+            </a>
+            <a class="more" href="ways.html">
+             Рейсы
+            </a>
+            <a class="more" href="services.html">
+                Услуги
+            </a>
+        </div>
+
+        </header>
+        
+        <main>
+            <a class="techSupport" href=""><img src="Images/—Pngtree—beautiful technical support vector line_5064458.png"></a>
+            <section class="search">
+                <button onclick="search()">Поиск</button>
+                <input id="search" placeholder="Место назначения" type="text">
+            </section>
+
+            <table id="table">
+                <tr>
+                    <td>Место назначения:</td>
+                    <td>Дата выезда:</td>
+                    <td>Время выезда:</td>
+                    <td>Время прибытия:</td>
+                </tr>
+            </table>
+        </main>
+
+        <footer>
+            <div class="lasad">
+                <div class='icon'>
+                   <img src="svg/map.svg">
+                <div><a class='text' href="https://www.google.com/maps/place/ул.+Ленинского+Комсомола+38,+Солигорск,+Минская+область+223710/data=!4m2!3m1!1s0x46d831b804bb0589:0xd5445526e0845a18?sa=X&ved=1t:242&ictx=111">223710 ул. Ленинского Комсомола 38, Солигорск</a></div>
+            </div>
+            </div>
+            <div class="lasad">
+                <div class='icon'>
+                    <img src="svg/mail.svg">
+                <div><a class='text' href="talexei2006@gmail.com">talexei2006@gmail.com</a></div>
+            </div>
+            </div>
+            <div class="lasad">
+                <div class='icon'><img src="svg/phone.svg"></div>
+                <div><a class='text' href="tel:+375 (33) 335-98-00">+375 (33) 335-98-00</a></div>
+            </div>
+        </footer>
+        <script>
+            let table = document.getElementById("table");
+            let trains;
+            function add(temp, i, x) {
+                    let create = document.createElement('td');
+                    table.querySelectorAll('tr')[i+1].append(create);
+                    table.querySelectorAll('tr')[i+1].querySelectorAll('td')[x].innerHTML = temp;
+            }
+            fetch("/DataBase/DB.xml").then(response => response.text()).then(str => new window.DOMParser().parseFromString(str, "text/xml")).then(data => {
+                trains = data.querySelectorAll('train');
+                for (let i = 0; i < trains.length; i++) {
+                    let x = 0;
+                    train = trains[i];
+                    let newRow = document.createElement("tr");
+                    table.append(newRow);
+                    let temp = train.querySelector('place').textContent;
+                    add(temp, i, x++);
+                    temp = train.querySelector('when').textContent;
+                    add(temp, i, x++);
+                    temp = train.querySelector('time').textContent;
+                    add(temp, i, x++);
+                    temp = train.querySelector('timeCome').textContent;
+                    add(temp, i, x++);
+                }
+            return;
+            });
+            document.getElementById('search').addEventListener('keydown', function() {
+                if (event.key == "Enter") search();
+            })
+            function search() {
+                let search = document.getElementById("search").value;
+                let places = [];
+                for (let i = 1; i < table.querySelectorAll('tr').length && table.querySelectorAll('tr'.length != 1); i++) {
+                    places[i] = table.querySelectorAll('tr')[i].querySelectorAll('td')[0].textContent;
+                }
+                let max = table.querySelectorAll('tr').length;
+                for (let i = 1; i < max; i++) {
+                    table.querySelectorAll('tr')[1].remove();
+                }
+                if (search == "") {
+                    for (let i = 0; i < trains.length; i++) {
+                        let newRow = document.createElement("tr");
+                        table.append(newRow);
+                        let x=0;
+                        add(trains[i].querySelector('place').textContent, i, x++);
+                        add(trains[i].querySelector('when').textContent, i, x++);
+                        add(trains[i].querySelector('time').textContent, i, x++);
+                        add(trains[i].querySelector('timeCome').textContent, i, x++);
+                    }
+                }
+                let number = 0;
+                for (let i = 0; i < trains.length; i++) {
+                    if (trains[i].querySelector('place').textContent == search) {
+                        console.log(trains[i].querySelector('place').textContent);
+                        let newRow = document.createElement("tr");
+                        table.append(newRow);
+                        let x = 0;
+                        add(trains[i].querySelector('place').textContent, number, x++);
+                        add(trains[i].querySelector('when').textContent, number, x++);
+                        add(trains[i].querySelector('time').textContent, number, x++);
+                        add(trains[i].querySelector('timeCome').textContent, number, x++);
+                        number++;
+                    }
+                }
+            }
+        </script> 
+</body>
+</html>

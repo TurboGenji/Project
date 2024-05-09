@@ -1,0 +1,44 @@
+body {
+    background-color: #dfe3ed;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+p {
+    font-size: 20px;
+}
+.adv-image {
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 13px 19px 2px rgba(0,0,0,.14), 0 5px 24px 4px rgba(0,0,0,.12);
+    width: 400px;
+    height: 40vh;
+}
+section {
+    display: block;
+    height: 50vh;
+}
+section:nth-child(even) figure {
+    float: left;
+}
+section:nth-child(odd) figure {
+    float: right
+}
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    width:400px
+}
+@media screen and (max-width:672px) {
+    figure {
+        display: none;
+    }
+    section {
+        height: auto;
+    }
+}

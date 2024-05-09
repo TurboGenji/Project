@@ -1,0 +1,39 @@
+footer {
+    background-color: #222;
+    width: 100vw;
+    display: inline-flex;
+    padding-left: 10%;
+    height: 200px;
+}
+
+.lasad {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-left: 1px solid #dfe3ed;
+    border-right: 1px solid #dfe3ed;
+}
+.text {
+    color: #dfe3ed;
+    display: flex;
+    justify-content: center;
+}
+.icon {
+    text-align: center;
+}
+
+
+@media screen and (max-width:672px) {
+
+.lasad {
+    border-bottom: 1px solid #dfe3ed;
+}
+footer {
+    align-items: center;
+    height: 500px;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+}
