@@ -328,10 +328,7 @@ h3 {
     display: inline-flex;
     flex-direction: column;
 }
-.adv1 {
-    width: 100%;
-    margin-left: 10px;
-}
+
 
 .image {
     visibility: hidden;
