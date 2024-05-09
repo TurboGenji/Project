@@ -290,7 +290,7 @@ h3 {
     top: -7em;
 }
 
-@media screen and (max-width:786px) {
+@media screen and (max-width:1000px) {
     .uns1, .uns2, .uns3, learn1, .learn2, .learn3 {
         opacity: 1;
     }
