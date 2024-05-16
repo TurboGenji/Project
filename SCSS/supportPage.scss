@@ -6,7 +6,8 @@ article {
     }
 }
 
-section {
+main {
+    div {
     padding: 0 20px 0 20px;;
     section {
         width: 50%;
@@ -28,6 +29,7 @@ section {
             text-decoration: underline;
         }
     }
+}
 }
 @media screen and (max-width: 1000px) {
     section {
