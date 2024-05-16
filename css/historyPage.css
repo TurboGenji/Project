@@ -19,14 +19,14 @@ p {
     width: 400px;
     height: 40vh;
 }
-section {
+div {
     display: block;
     height: 50vh;
 }
-section:nth-child(even) figure {
+div:nth-child(even) figure {
     float: left;
 }
-section:nth-child(odd) figure {
+div:nth-child(odd) figure {
     float: right
 }
 figcaption {
@@ -38,7 +38,7 @@ figcaption {
     figure {
         display: none;
     }
-    section {
+    div {
         height: auto;
     }
 }
