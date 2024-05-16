@@ -22,7 +22,7 @@ section section:nth-child(2) {
 section section:nth-child(3) {
   margin-left: 25%;
 }
-section section:nth-child(3) p {
+section section:nth-child(3) h3 {
   text-align: center;
   font-size: 30px;
   font-weight: 600;
