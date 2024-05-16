@@ -285,10 +285,7 @@ h3 {
     color: #000000;
     display: inline;
 }
-.link {
-    position: relative;
-    top: -7em;
-}
+
 
 @media screen and (max-width:1000px) {
     .uns1, .uns2, .uns3, learn1, .learn2, .learn3 {
