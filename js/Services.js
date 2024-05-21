@@ -11,7 +11,7 @@ window.onload = function() {
 
     var images = document.getElementsByClassName("Myata");
     var imagesBeer = document.getElementsByClassName("Beer");
-    var sections = document.querySelectorAll("section");
+    var sections = document.getElementsByClassName("section");
     for (let i = 0; i < images.length; i++) {
 
         images[i].addEventListener("mouseover", function() {
@@ -29,7 +29,6 @@ window.onload = function() {
             if (x.matches) return;
             imagesBeer[i].style.width = "30vw";
             choosenBeer = i;
-            console.log(choosenBeer);
             for (let x = 0; x < imagesBeer.length; x++) {
                 if (x == i) continue;
                 imagesBeer[x].parentElement.style.display = "none";
